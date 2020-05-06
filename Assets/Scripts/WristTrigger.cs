@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WristTrigger : MonoBehaviour
 {
     public Material pickUpMaterial;
     public Material activatedPickUpMaterial;
     public GameObject pickUpReact;
+    public GameObject UIManager;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +30,7 @@ public class WristTrigger : MonoBehaviour
                 other.gameObject.GetComponent<PickUpCode>().activated = false;
                 other.gameObject.GetComponent<MeshRenderer>().material = pickUpMaterial;
                 pickUpReact.gameObject.GetComponent<PickUpReact>().pressedPickUp = true;
+                UIManager.GetComponent<UIManager>().UpScore();
             }
         }
     }

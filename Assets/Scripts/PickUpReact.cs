@@ -8,6 +8,7 @@ public class PickUpReact : MonoBehaviour
     public float reactionTime;
     public bool activeReact = true;
     public bool pressedPickUp = false;
+    public bool gameFinished = false;
     public List<GameObject> pickUps = new List<GameObject>();
     public Material pickUpMaterial;
     public Material activatedPickUpMaterial;
@@ -29,6 +30,15 @@ public class PickUpReact : MonoBehaviour
             StopCoroutine("StartReact");
             StartCoroutine("StartReact");
             pressedPickUp = !pressedPickUp;
+        }
+        if (gameFinished)
+        {
+            StopCoroutine("StartReact");
+            if (activatedPickUp)
+            {
+                activatedPickUp.GetComponent<PickUpCode>().activated = false;
+                activatedPickUp.GetComponent<MeshRenderer>().material = pickUpMaterial;
+            }
         }
     }
 

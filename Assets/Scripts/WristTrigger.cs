@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class WristTrigger : MonoBehaviour
 {
+    public Material pickUpMaterial;
+    public Material activatedPickUpMaterial;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +22,10 @@ public class WristTrigger : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("PickUp")){
-            other.gameObject.SetActive(false);
+            if (other.gameObject.GetComponent<MeshRenderer>().sharedMaterial.Equals(activatedPickUpMaterial))
+            {
+                other.gameObject.GetComponent<MeshRenderer>().material = pickUpMaterial;
+            }
         }
     }
 }

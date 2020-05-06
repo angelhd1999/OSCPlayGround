@@ -1378,7 +1378,7 @@ MonoBehaviour:
   scoreText: {fileID: 1741341261}
   timer: {fileID: 717734761}
   finalScore: {fileID: 2087544170}
-  gameTime: 121
+  gameTime: 90
   pickUpReact: {fileID: 1453181461}
 --- !u!1001 &1652029603
 PrefabInstance:
@@ -1924,7 +1924,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 150}
-  m_SizeDelta: {x: 300, y: 30}
+  m_SizeDelta: {x: 350, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2102204445 stripped
 GameObject:

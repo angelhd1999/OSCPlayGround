@@ -42,8 +42,8 @@ public class TrackingReceiver : MonoBehaviour
 
     void StartPose() {
         pose.Add("nose", Vector3.zero);
-        pose.Add("rightWrist", Vector3.zero);
         pose.Add("leftWrist", Vector3.zero);
+        pose.Add("rightWrist", Vector3.zero);
     }
     
 
@@ -51,8 +51,8 @@ public class TrackingReceiver : MonoBehaviour
     void Update()
     {
         nose.transform.position = pose["nose"];
-        wristR.transform.position = pose["rightWrist"];
-        wristL.transform.position = pose["leftWrist"];
+        wristL.transform.position = pose["rightWrist"]; //Due to the mirror effect.
+        wristR.transform.position = pose["leftWrist"]; //Due to the mirror effect.
     }
 
     protected void MessageReceived(OSCMessage message)

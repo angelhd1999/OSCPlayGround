@@ -242,6 +242,7 @@ MonoBehaviour:
   pickUpMaterial: {fileID: 2100000, guid: add2f7a73dbe53547b008dd8386ac7c6, type: 2}
   activatedPickUpMaterial: {fileID: 2100000, guid: 95f22c5ffb510ed40958b2bf4955b77c,
     type: 2}
+  pickUpReact: {fileID: 1453181461}
 --- !u!1 &248553158
 GameObject:
   m_ObjectHideFlags: 0
@@ -1003,6 +1004,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   reactionTime: 3
   activeReact: 1
+  pressedPickUp: 0
   pickUps:
   - {fileID: 431073193}
   - {fileID: 1412915148}
@@ -1150,7 +1152,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -6193426998119782649, guid: 88c938ed0d064c14cbaf83a1d05009af, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 88c938ed0d064c14cbaf83a1d05009af, type: 3}
 --- !u!1001 &1727250930
 PrefabInstance:
@@ -1593,6 +1596,7 @@ MonoBehaviour:
   pickUpMaterial: {fileID: 2100000, guid: add2f7a73dbe53547b008dd8386ac7c6, type: 2}
   activatedPickUpMaterial: {fileID: 2100000, guid: 95f22c5ffb510ed40958b2bf4955b77c,
     type: 2}
+  pickUpReact: {fileID: 1453181461}
 --- !u!1001 &7552482859032198565
 PrefabInstance:
   m_ObjectHideFlags: 0

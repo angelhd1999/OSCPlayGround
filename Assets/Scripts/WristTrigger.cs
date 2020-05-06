@@ -6,6 +6,7 @@ public class WristTrigger : MonoBehaviour
 {
     public Material pickUpMaterial;
     public Material activatedPickUpMaterial;
+    public GameObject pickUpReact;
 
     // Start is called before the first frame update
     void Start()
@@ -22,9 +23,11 @@ public class WristTrigger : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("PickUp")){
-            if (other.gameObject.GetComponent<MeshRenderer>().sharedMaterial.Equals(activatedPickUpMaterial))
+            if (other.gameObject.GetComponent<PickUpCode>().activated)
             {
+                other.gameObject.GetComponent<PickUpCode>().activated = false;
                 other.gameObject.GetComponent<MeshRenderer>().material = pickUpMaterial;
+                pickUpReact.gameObject.GetComponent<PickUpReact>().pressedPickUp = true;
             }
         }
     }

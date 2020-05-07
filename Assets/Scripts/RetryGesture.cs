@@ -62,7 +62,6 @@ public class RetryGesture : MonoBehaviour
 
     private IEnumerator DownYes()
     {
-        Debug.Log(downMade);
         while (!downMade)
         {
             if (head.transform.position.y < yesInitPosition - 50)
@@ -95,7 +94,7 @@ public class RetryGesture : MonoBehaviour
             if (head.transform.position.x > noInitPosition + 50)
             {
                 rightMade = true;
-                Debug.Log("No! --> Exit");
+                Debug.Log("Negative! --> Exit");
                 UI.GetComponent<UIManager>().ExitGame();
             }
             yield return new WaitForSeconds(0.1f);

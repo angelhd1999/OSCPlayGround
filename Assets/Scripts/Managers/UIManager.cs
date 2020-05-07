@@ -12,6 +12,7 @@ public class UIManager : MonoBehaviour
     public Text finalScore;
     public Text yesGesture;
     public Text noGesture;
+    public Text retryQuestion;
     public float gameTime;
     public GameObject pickUpReact;
     public GameObject head;
@@ -62,6 +63,7 @@ public class UIManager : MonoBehaviour
         finalScore.text = "Your final score is: " + score;
         yesGesture.text = "Nod to restart";
         noGesture.text = "Shake your head to quit the game";
+        retryQuestion.text = "Retry?";
     }
 
     public void RestartGame()

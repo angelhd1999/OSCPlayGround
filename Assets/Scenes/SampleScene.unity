@@ -1768,7 +1768,7 @@ MonoBehaviour:
   yesGesture: {fileID: 1119392745}
   noGesture: {fileID: 1918422285}
   retryQuestion: {fileID: 2032519811}
-  gameTime: 5
+  gameTime: 90
   pickUpReact: {fileID: 1453181461}
   head: {fileID: 761990083}
 --- !u!1001 &1652029603

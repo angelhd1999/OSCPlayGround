@@ -24,7 +24,7 @@ random one, if it is reached it will be changed immediately by another random sp
   * **Time counter** located at the top right of the screen.
   * **Final score text** shown when time ends.
 
-# Rquired items
+# Required items
 
 This Reaction Machine minigame is based on these other projects: 
 

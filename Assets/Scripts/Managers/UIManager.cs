@@ -3,14 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
     public Text scoreText;
     public Text timer;
     public Text finalScore;
+    public Text yesGesture;
+    public Text noGesture;
     public float gameTime;
     public GameObject pickUpReact;
+    public GameObject head;
 
     private int score = 0;
     private bool gameFinished = false;
@@ -53,7 +57,20 @@ public class UIManager : MonoBehaviour
     {
         gameFinished = true;
         pickUpReact.GetComponent<PickUpReact>().gameFinished = true;
+        head.GetComponent<RetryGesture>().canRetry = true;
         timer.text = "Time: 00:00";
         finalScore.text = "Your final score is: " + score;
+        yesGesture.text = "Nod to restart";
+        noGesture.text = "Shake your head to quit the game";
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene("SampleScene");
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 }

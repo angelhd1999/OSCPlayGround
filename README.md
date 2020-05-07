@@ -8,5 +8,11 @@
 
 Third deliverable, Lab 3 of Interactive Systems<br />
 
-<Explanation of the game>
- 
+**Minigame** made to **train the reflexes** in which you have a **minute and a half**<br />
+to try **to reach the maximum number of red spheres**. **Each sphere** is **marked**<br />
+in red **for 3 seconds**, if it is not reached it will be changed by another<br />
+random one, if it is reached it will be changed immediately by another<br />
+random sphere.<br />
+
+**Game features:**
+<Features>

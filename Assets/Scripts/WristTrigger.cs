@@ -10,10 +10,11 @@ public class WristTrigger : MonoBehaviour
     public GameObject pickUpReact;
     public GameObject UIManager;
 
+    private AudioSource source;
     // Start is called before the first frame update
     void Start()
     {
-        
+        source = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -30,6 +31,7 @@ public class WristTrigger : MonoBehaviour
                 other.gameObject.GetComponent<PickUpCode>().activated = false;
                 other.gameObject.GetComponent<MeshRenderer>().material = pickUpMaterial;
                 pickUpReact.gameObject.GetComponent<PickUpReact>().pressedPickUp = true;
+                source.Play();
                 UIManager.GetComponent<UIManager>().UpScore();
             }
         }

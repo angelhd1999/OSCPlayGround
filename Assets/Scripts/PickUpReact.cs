@@ -15,11 +15,13 @@ public class PickUpReact : MonoBehaviour
 
     private GameObject activatedPickUp;
     private int specificRandom;
+    private AudioSource source;
 
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine("StartReact");
+        source = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -46,8 +48,11 @@ public class PickUpReact : MonoBehaviour
     {
         if (activatedPickUp)
         {
-            activatedPickUp.GetComponent<PickUpCode>().activated = false;
-            activatedPickUp.GetComponent<MeshRenderer>().material = pickUpMaterial;
+            if (activatedPickUp.GetComponent<PickUpCode>().activated) {
+                source.Play();
+                activatedPickUp.GetComponent<PickUpCode>().activated = false;
+                activatedPickUp.GetComponent<MeshRenderer>().material = pickUpMaterial;
+            }
         }
         int finalRandom = Random.Range(0, pickUps.Count);
         if (specificRandom == finalRandom) //To change to a diferent pick up.

@@ -23,6 +23,11 @@ random one, if it is reached it will be changed immediately by another random sp
   * **Score** located at the top left of the screen.
   * **Time counter** located at the top right of the screen.
   * **Final score text** shown when time ends.
+  * **Rety** text and instructions.
+  * **Background changed** to a uniform **dark gray**.
+* **Gestures added**:
+  * **Nod** to **restart**.
+  * **Shake your head** to **quit the game**.
 
 # Required items
 
